@@ -15,7 +15,7 @@ def run_game():
     pygame.display.set_caption("Airplane")
 
     # Make a plane
-    plane = Plane(screen)
+    plane = Plane(p_settings, screen)
 
     # Set the background color.
     bg_color = (135, 206, 250)
