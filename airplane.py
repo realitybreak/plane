@@ -9,9 +9,9 @@ import game_functions as gf
 def run_game():
     # Initialize pygame, settings, and screen object.
     pygame.init()
-    ai_settings = Settings()
+    p_settings = Settings()
     screen = pygame.display.set_mode(
-        (ai_settings.screen_width, ai_settings.screen_height))
+        (p_settings.screen_width, p_settings.screen_height))
     pygame.display.set_caption("Airplane")
 
     # Make a plane
@@ -22,10 +22,7 @@ def run_game():
 
     # Start the main loop for the game.
     while True:
-        gf.check_events()
-        gf.update_screen(ai_settings, screen, plane)
-
-        
-
+        gf.check_events(plane)
+        gf.update_screen(p_settings, screen, plane)
         
 run_game()
