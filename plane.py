@@ -15,6 +15,14 @@ class Plane():
         self.rect.centery = self.screen_rect.centery
         self.rect.left = self.screen_rect.left
 
+        # Movement flag
+        self.moving_up = False
+
+    def update(self):
+        """Update the plane's position based on the movement flag."""
+        if self.moving_up:
+            self.rect.centery -= 1
+
     def blitme(self):
         """Draw the ship at its current location."""
         self.screen.blit(self.image, self.rect)

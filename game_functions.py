@@ -11,8 +11,12 @@ def check_events(plane):
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
-                # Move the plane up
-                plane.rect.centery -= 1
+                plane.moving_up = True
+
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_UP:
+                plane.moving_up = False
+                
 
 def update_screen(p_settings, screen, plane):
     """Update images on the screen and flip to the new screen."""

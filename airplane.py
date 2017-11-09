@@ -23,6 +23,7 @@ def run_game():
     # Start the main loop for the game.
     while True:
         gf.check_events(plane)
+        plane.update()
         gf.update_screen(p_settings, screen, plane)
         
 run_game()
