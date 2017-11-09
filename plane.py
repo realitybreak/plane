@@ -17,11 +17,14 @@ class Plane():
 
         # Movement flag
         self.moving_up = False
+        self.moving_down = False
 
     def update(self):
         """Update the plane's position based on the movement flag."""
         if self.moving_up:
             self.rect.centery -= 1
+        if self.moving_down:
+            self.rect.centery += 1
 
     def blitme(self):
         """Draw the ship at its current location."""
